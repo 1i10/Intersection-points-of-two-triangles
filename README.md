@@ -193,3 +193,10 @@ PolygonPoints – переменная для хранения найденны�
 * Нажать Run Coverage  
 Для остальных проектов проделать все то же самое.  
 <a name="Example"><h2>Пример</h2></a>
+**Пользовательский ввод и вывод результата в консоли**  
+  
+<img src="https://github.com/1i10/Intersection-points-of-two-triangles/blob/master/ExampleImages/console.png" width="700" height="350" />  
+  
+**Визуализация результата**  
+  
+<img src="https://github.com/1i10/Intersection-points-of-two-triangles/blob/master/ExampleImages/star.png" width="500" height="500" /> 
