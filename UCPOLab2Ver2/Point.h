@@ -16,7 +16,7 @@ public:
 	float GetY() { return y; }
 	friend bool operator==(const Point& Point1, const Point& Point2);
 	friend std::ostream& operator<< (std::ostream& Out, const Point& Point);
-	friend Point InputPoint();//ââîä êîîðäèíàò òî÷êè
+	friend Point InputPoint();//Ð²Ð²Ð¾Ð´ ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚ Ñ‚Ð¾Ñ‡ÐºÐ¸
 };
 
 Point InputPoint();

@@ -17,14 +17,14 @@ LineEquation::LineEquation(Point FirstPoint, Point SecondPoint)
 	this->b = SecondPoint.GetX() - FirstPoint.GetX();
 	this->c = FirstPoint.GetX() * SecondPoint.GetY() - SecondPoint.GetX() * FirstPoint.GetY();
 
-	if (FirstPoint.GetX() < SecondPoint.GetX())//выясняем, какая координата меньше/больше по X
+	if (FirstPoint.GetX() < SecondPoint.GetX())//РІС‹СЏСЃРЅСЏРµРј, РєР°РєР°СЏ РєРѕРѕСЂРґРёРЅР°С‚Р° РјРµРЅСЊС€Рµ/Р±РѕР»СЊС€Рµ РїРѕ X
 	{
 		this->FirstPoint = FirstPoint;
 		this->SecondPoint = SecondPoint;
 	}
-	else if (FirstPoint.GetX() == SecondPoint.GetX())//линия располагается вертикально и тогда смотрим по Y
+	else if (FirstPoint.GetX() == SecondPoint.GetX())//Р»РёРЅРёСЏ СЂР°СЃРїРѕР»Р°РіР°РµС‚СЃСЏ РІРµСЂС‚РёРєР°Р»СЊРЅРѕ Рё С‚РѕРіРґР° СЃРјРѕС‚СЂРёРј РїРѕ Y
 	{
-		if (FirstPoint.GetY() < SecondPoint.GetY())//выясняем, какая координата меньше/больше по Y
+		if (FirstPoint.GetY() < SecondPoint.GetY())//РІС‹СЏСЃРЅСЏРµРј, РєР°РєР°СЏ РєРѕРѕСЂРґРёРЅР°С‚Р° РјРµРЅСЊС€Рµ/Р±РѕР»СЊС€Рµ РїРѕ Y
 		{
 			this->FirstPoint = FirstPoint;
 			this->SecondPoint = SecondPoint;
@@ -74,10 +74,10 @@ float LineEquation::DeterminantMatrix2x2(float A11, float A12, float A21, float 
 
 void LineEquation::IntersectionOfLines(Polygon& PolygonPoints, LineEquation Eq1, LineEquation Eq2)
 {
-	//метод Крамера
+	//РјРµС‚РѕРґ РљСЂР°РјРµСЂР°
 	LineEquation Det;
 	float Determinant = Det.DeterminantMatrix2x2(Eq1.GetA(), Eq1.GetB(), Eq2.GetA(), Eq2.GetB());
-	if (Determinant == 0.0f)//линии не пересекаются
+	if (Determinant == 0.0f)//Р»РёРЅРёРё РЅРµ РїРµСЂРµСЃРµРєР°СЋС‚СЃСЏ
 	{
 		return;
 	}
@@ -91,34 +91,34 @@ void LineEquation::IntersectionOfLines(Polygon& PolygonPoints, LineEquation Eq1,
 	PointIntersection.SetX(DeterminantX / Determinant);
 	PointIntersection.SetY(DeterminantY / Determinant);
 
-	//проверка расположения найденной точки(которая принадлежит прямым) относительно отрезков треугольников
+	//РїСЂРѕРІРµСЂРєР° СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ РЅР°Р№РґРµРЅРЅРѕР№ С‚РѕС‡РєРё(РєРѕС‚РѕСЂР°СЏ РїСЂРёРЅР°РґР»РµР¶РёС‚ РїСЂСЏРјС‹Рј) РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ РѕС‚СЂРµР·РєРѕРІ С‚СЂРµСѓРіРѕР»СЊРЅРёРєРѕРІ
 	if ((PointIntersection.GetX() < Eq1.FirstPoint.GetX() || PointIntersection.GetX() > Eq1.SecondPoint.GetX()) || (PointIntersection.GetX() < Eq2.FirstPoint.GetX() || PointIntersection.GetX() > Eq2.SecondPoint.GetX()))
 	{
-		return;//точка располагается сзади или спереди отрезков
+		return;//С‚РѕС‡РєР° СЂР°СЃРїРѕР»Р°РіР°РµС‚СЃСЏ СЃР·Р°РґРё РёР»Рё СЃРїРµСЂРµРґРё РѕС‚СЂРµР·РєРѕРІ
 	}
-	if (PointIntersection.GetX() == Eq1.FirstPoint.GetX() && PointIntersection.GetX() == Eq1.SecondPoint.GetX())//для линии треугольника 1
+	if (PointIntersection.GetX() == Eq1.FirstPoint.GetX() && PointIntersection.GetX() == Eq1.SecondPoint.GetX())//РґР»СЏ Р»РёРЅРёРё С‚СЂРµСѓРіРѕР»СЊРЅРёРєР° 1
 	{
 		if (PointIntersection.GetY() < Eq1.FirstPoint.GetY() || PointIntersection.GetY() > Eq1.SecondPoint.GetY())
 		{
-			return;//вертикальная линия, точка располгается ниже или выше отрезка
+			return;//РІРµСЂС‚РёРєР°Р»СЊРЅР°СЏ Р»РёРЅРёСЏ, С‚РѕС‡РєР° СЂР°СЃРїРѕР»РіР°РµС‚СЃСЏ РЅРёР¶Рµ РёР»Рё РІС‹С€Рµ РѕС‚СЂРµР·РєР°
 		}
 	}
-	else if (PointIntersection.GetX() == Eq2.FirstPoint.GetX() && PointIntersection.GetX() == Eq2.SecondPoint.GetX())//для линии треугольника 2
+	else if (PointIntersection.GetX() == Eq2.FirstPoint.GetX() && PointIntersection.GetX() == Eq2.SecondPoint.GetX())//РґР»СЏ Р»РёРЅРёРё С‚СЂРµСѓРіРѕР»СЊРЅРёРєР° 2
 	{
 		if (PointIntersection.GetY() < Eq2.FirstPoint.GetY() || PointIntersection.GetY() > Eq2.SecondPoint.GetY())
 		{
-			return;//вертикальная линия, точка располгается ниже или выше отрезка
+			return;//РІРµСЂС‚РёРєР°Р»СЊРЅР°СЏ Р»РёРЅРёСЏ, С‚РѕС‡РєР° СЂР°СЃРїРѕР»РіР°РµС‚СЃСЏ РЅРёР¶Рµ РёР»Рё РІС‹С€Рµ РѕС‚СЂРµР·РєР°
 		}
 	}
-	//если точка равна одной из вершин
+	//РµСЃР»Рё С‚РѕС‡РєР° СЂР°РІРЅР° РѕРґРЅРѕР№ РёР· РІРµСЂС€РёРЅ
 	if (PointIntersection == Eq1.FirstPoint || PointIntersection == Eq1.SecondPoint)
 	{
-		//проверить была ли она уже добавлена
+		//РїСЂРѕРІРµСЂРёС‚СЊ Р±С‹Р»Р° Р»Рё РѕРЅР° СѓР¶Рµ РґРѕР±Р°РІР»РµРЅР°
 		for (unsigned int i = 0; i < PolygonPoints.GetCoordinatesPolygon().size(); i++)
 		{
 			if (PolygonPoints.GetCoordinatesPolygon()[i] == PointIntersection)
 			{
-				return;//данная точка уже была добавлена
+				return;//РґР°РЅРЅР°СЏ С‚РѕС‡РєР° СѓР¶Рµ Р±С‹Р»Р° РґРѕР±Р°РІР»РµРЅР°
 			}
 		}
 	}

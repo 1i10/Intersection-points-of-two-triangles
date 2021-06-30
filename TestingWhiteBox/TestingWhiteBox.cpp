@@ -112,7 +112,7 @@ namespace TestingWhiteBox
 			Lines.LinesTriangle(LinesTr1, Triangle1);
 			Triangle Triangle2(Tr2Point1, Tr2Point2, Tr2Point3);
 
-			Lines.SearchPointInTriangle(PolygonPoints, LinesTr1, Triangle2);//поиск в первом треугольнике точек из второго
+			Lines.SearchPointInTriangle(PolygonPoints, LinesTr1, Triangle2);//РїРѕРёСЃРє РІ РїРµСЂРІРѕРј С‚СЂРµСѓРіРѕР»СЊРЅРёРєРµ С‚РѕС‡РµРє РёР· РІС‚РѕСЂРѕРіРѕ
 			
 			int PolygonSize = PolygonPoints.GetCoordinatesPolygon().size();
 			Assert::AreEqual(2, PolygonSize);

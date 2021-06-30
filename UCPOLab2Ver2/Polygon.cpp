@@ -17,21 +17,21 @@ void Polygon::TriangleIntersectionContour(Polygon& PolygonPoints, Triangle Figur
 	Lines.LinesTriangle(LinesFigure1, Figure1);
 	Lines.LinesTriangle(LinesFigure2, Figure2);
 
-	//проверка на точки внутри треугольника
+	//РїСЂРѕРІРµСЂРєР° РЅР° С‚РѕС‡РєРё РІРЅСѓС‚СЂРё С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°
 	Lines.SearchPointInTriangle(PolygonPoints, LinesFigure1, Figure2);
 	if (PolygonPoints.CoordinatePolygon.size() == 3)
 	{
 		IsInside = true;
-		return;// второй треугольник в первом
+		return;// РІС‚РѕСЂРѕР№ С‚СЂРµСѓРіРѕР»СЊРЅРёРє РІ РїРµСЂРІРѕРј
 	}
 
-	if (PolygonPoints.CoordinatePolygon.size() == 0)//от предыдущего поиска нет точек
+	if (PolygonPoints.CoordinatePolygon.size() == 0)//РѕС‚ РїСЂРµРґС‹РґСѓС‰РµРіРѕ РїРѕРёСЃРєР° РЅРµС‚ С‚РѕС‡РµРє
 	{
 		Lines.SearchPointInTriangle(PolygonPoints, LinesFigure2, Figure1);
 		if (PolygonPoints.CoordinatePolygon.size() == 3)
 		{
 			IsInside = true;
-			return;//первый треугольник во втором
+			return;//РїРµСЂРІС‹Р№ С‚СЂРµСѓРіРѕР»СЊРЅРёРє РІРѕ РІС‚РѕСЂРѕРј
 		}
 	}
 	else

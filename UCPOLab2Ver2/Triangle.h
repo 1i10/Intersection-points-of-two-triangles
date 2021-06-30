@@ -13,6 +13,6 @@ public:
 	~Triangle() {}
 	void SetTriangleVertices(Point Ver1, Point Ver2, Point  Ver3);
 	vector<Point> GetCoordinatesTriangle() { return CoordinateTriangle; }
-	bool IsIdenticalTriangles(Triangle Figure1, Triangle Figure2);//проверка на идентичность треугольников
-	bool IsTriangle();//проверка на то, что введенная фигура - треугольник
+	bool IsIdenticalTriangles(Triangle Figure1, Triangle Figure2);//РїСЂРѕРІРµСЂРєР° РЅР° РёРґРµРЅС‚РёС‡РЅРѕСЃС‚СЊ С‚СЂРµСѓРіРѕР»СЊРЅРёРєРѕРІ
+	bool IsTriangle();//РїСЂРѕРІРµСЂРєР° РЅР° С‚Рѕ, С‡С‚Рѕ РІРІРµРґРµРЅРЅР°СЏ С„РёРіСѓСЂР° - С‚СЂРµСѓРіРѕР»СЊРЅРёРє
 };

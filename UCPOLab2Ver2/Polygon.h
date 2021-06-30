@@ -13,6 +13,6 @@ public:
 	~Polygon() {}
 	void SetPolygonPoint(Point PolyPoint);
 	vector<Point> GetCoordinatesPolygon() { return CoordinatePolygon; }
-	void TriangleIntersectionContour(Polygon& PolygonPoints, Triangle Figure1, Triangle Figure2);//определение точек пересечения двух треугольников
-	void PrintPolygonPoints();//вывод точек пересечения двух треугольников
+	void TriangleIntersectionContour(Polygon& PolygonPoints, Triangle Figure1, Triangle Figure2);//РѕРїСЂРµРґРµР»РµРЅРёРµ С‚РѕС‡РµРє РїРµСЂРµСЃРµС‡РµРЅРёСЏ РґРІСѓС… С‚СЂРµСѓРіРѕР»СЊРЅРёРєРѕРІ
+	void PrintPolygonPoints();//РІС‹РІРѕРґ С‚РѕС‡РµРє РїРµСЂРµСЃРµС‡РµРЅРёСЏ РґРІСѓС… С‚СЂРµСѓРіРѕР»СЊРЅРёРєРѕРІ
 };

@@ -165,7 +165,7 @@ namespace UCPOLab2Ver2Tests
 			Point Tr2Point1(10, -90);
 			Point Tr2Point2(70, 50);
 			Point Tr2Point3(150, -150);
-			//без перестановки
+			//Р±РµР· РїРµСЂРµСЃС‚Р°РЅРѕРІРєРё
 			Triangle1.SetTriangleVertices(Tr1Point1, Tr1Point2, Tr1Point3);
 			Triangle2.SetTriangleVertices(Tr2Point1, Tr2Point2, Tr2Point3);
 
@@ -173,7 +173,7 @@ namespace UCPOLab2Ver2Tests
 			int PolygonSize = PolygonPoints.GetCoordinatesPolygon().size();
 			Assert::AreEqual(3, PolygonSize);
 
-			//перестановка порядка вершин треугольника1
+			//РїРµСЂРµСЃС‚Р°РЅРѕРІРєР° РїРѕСЂСЏРґРєР° РІРµСЂС€РёРЅ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°1
 			//1
 			Triangle1.SetTriangleVertices(Tr1Point2, Tr1Point1, Tr1Point3);
 			PolygonPoints.TriangleIntersectionContour(PolygonPoints1, Triangle1, Triangle2);
@@ -218,7 +218,7 @@ namespace UCPOLab2Ver2Tests
 			Point Tr1Point1(-30, -30);
 			Point Tr1Point2(-80, 110);
 			Point Tr1Point3(30, 110);
-			//следующие точки образуют линию
+			//СЃР»РµРґСѓСЋС‰РёРµ С‚РѕС‡РєРё РѕР±СЂР°Р·СѓСЋС‚ Р»РёРЅРёСЋ
 			Point Tr2Point1(-40, 30);
 			Point Tr2Point2(10, 30);
 			Point Tr2Point3(30, 30);
@@ -250,14 +250,14 @@ namespace UCPOLab2Ver2Tests
 			Point Tr2Point1(20, 50);
 			Point Tr2Point2(-60, 90);
 			Point Tr2Point3(30, 30);
-			//вертикальная линия у треугольника 1
+			//РІРµСЂС‚РёРєР°Р»СЊРЅР°СЏ Р»РёРЅРёСЏ Сѓ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР° 1
 			Triangle1.SetTriangleVertices(Tr1Point1, Tr1Point2, Tr1Point3);
 			Triangle2.SetTriangleVertices(Tr2Point1, Tr2Point2, Tr2Point3);
 
 			PolygonPoints.TriangleIntersectionContour(PolygonPoints, Triangle1, Triangle2);
 			int PolygonSize = PolygonPoints.GetCoordinatesPolygon().size();
 			Assert::AreEqual(4, PolygonSize);
-			//вертикальная линия у треугольника 2
+			//РІРµСЂС‚РёРєР°Р»СЊРЅР°СЏ Р»РёРЅРёСЏ Сѓ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР° 2
 			Triangle1.SetTriangleVertices(Tr2Point1, Tr2Point2, Tr2Point3);
 			Triangle2.SetTriangleVertices(Tr1Point1, Tr1Point2, Tr1Point3);
 			Polygon PolygonPoints2;

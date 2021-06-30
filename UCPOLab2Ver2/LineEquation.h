@@ -12,17 +12,17 @@ private:
 	float a;
 	float b;
 	float c;
-	Point FirstPoint;//начало отрезка
-	Point SecondPoint;//конец отрезка
+	Point FirstPoint;//РЅР°С‡Р°Р»Рѕ РѕС‚СЂРµР·РєР°
+	Point SecondPoint;//РєРѕРЅРµС† РѕС‚СЂРµР·РєР°
 public:
 	LineEquation();
 	LineEquation(Point FirstPoint, Point SecondPoint);
 	float GetA() { return a; }
 	float GetB() { return b; }
 	float GetC() { return c; }
-	void LinesTriangle(vector<LineEquation>& LinesFigure, Triangle Figure);//выделение линий, которые образует треугольник
-	void SearchPointInTriangle(Polygon& PolygonPoints, vector<LineEquation> LinesFigure1, Triangle Figure2);//поиск точек внутри треугольника
-	float DeterminantMatrix2x2(float A11, float A12, float A21, float A22);//определитель матрицы 2х2
-	void IntersectionOfLines(Polygon& PolygonPoints, LineEquation Eq1, LineEquation Eq2);//определение точки пресечения двух линий
+	void LinesTriangle(vector<LineEquation>& LinesFigure, Triangle Figure);//РІС‹РґРµР»РµРЅРёРµ Р»РёРЅРёР№, РєРѕС‚РѕСЂС‹Рµ РѕР±СЂР°Р·СѓРµС‚ С‚СЂРµСѓРіРѕР»СЊРЅРёРє
+	void SearchPointInTriangle(Polygon& PolygonPoints, vector<LineEquation> LinesFigure1, Triangle Figure2);//РїРѕРёСЃРє С‚РѕС‡РµРє РІРЅСѓС‚СЂРё С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°
+	float DeterminantMatrix2x2(float A11, float A12, float A21, float A22);//РѕРїСЂРµРґРµР»РёС‚РµР»СЊ РјР°С‚СЂРёС†С‹ 2С…2
+	void IntersectionOfLines(Polygon& PolygonPoints, LineEquation Eq1, LineEquation Eq2);//РѕРїСЂРµРґРµР»РµРЅРёРµ С‚РѕС‡РєРё РїСЂРµСЃРµС‡РµРЅРёСЏ РґРІСѓС… Р»РёРЅРёР№
 };
 

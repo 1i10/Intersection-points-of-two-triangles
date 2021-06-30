@@ -18,36 +18,36 @@ int main(int argc, char** argv)
 {
 	setlocale(LC_ALL, "rus");
 
-	cout << "Ââåäèòå êîîðäèíàòû òî÷åê äëÿ òðåóãîëüíèêà 1:" << endl;
-	cout << "Òî÷êà 1 :";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ñ‹ Ñ‚Ð¾Ñ‡ÐµÐº Ð´Ð»Ñ Ñ‚Ñ€ÐµÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸ÐºÐ° 1:" << endl;
+	cout << "Ð¢Ð¾Ñ‡ÐºÐ° 1 :";
 	Point Figure1Ver1 = InputPoint();
-	cout << "Òî÷êà 2 :";
+	cout << "Ð¢Ð¾Ñ‡ÐºÐ° 2 :";
 	Point Figure1Ver2 = InputPoint();
-	cout << "Òî÷êà 3 :";
+	cout << "Ð¢Ð¾Ñ‡ÐºÐ° 3 :";
 	Point Figure1Ver3 = InputPoint();
 
 	TriangleFigure1.SetTriangleVertices(Figure1Ver1, Figure1Ver2, Figure1Ver3);
-	cout << "Òî÷êè òðåóãîëüíèêà 1: " << Figure1Ver1 << ", " << Figure1Ver2 << ", " << Figure1Ver3 << endl;
+	cout << "Ð¢Ð¾Ñ‡ÐºÐ¸ Ñ‚Ñ€ÐµÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸ÐºÐ° 1: " << Figure1Ver1 << ", " << Figure1Ver2 << ", " << Figure1Ver3 << endl;
 
-	cout << "Ââåäèòå êîîðäèíàòû òî÷åê äëÿ òðåóãîëüíèêà 2:" << endl;
-	cout << "Òî÷êà 1 :";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ñ‹ Ñ‚Ð¾Ñ‡ÐµÐº Ð´Ð»Ñ Ñ‚Ñ€ÐµÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸ÐºÐ° 2:" << endl;
+	cout << "Ð¢Ð¾Ñ‡ÐºÐ° 1 :";
 	Point Figure2Ver1 = InputPoint();
-	cout << "Òî÷êà 2 :";
+	cout << "Ð¢Ð¾Ñ‡ÐºÐ° 2 :";
 	Point Figure2Ver2 = InputPoint();
-	cout << "Òî÷êà 3 :";
+	cout << "Ð¢Ð¾Ñ‡ÐºÐ° 3 :";
 	Point Figure2Ver3 = InputPoint();
 
 	TriangleFigure2.SetTriangleVertices(Figure2Ver1, Figure2Ver2, Figure2Ver3);
-	cout << "Òî÷êè òðåóãîëüíèêà 2: " << Figure2Ver1 << ", " << Figure2Ver2 << ", " << Figure2Ver3 << endl;
+	cout << "Ð¢Ð¾Ñ‡ÐºÐ¸ Ñ‚Ñ€ÐµÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸ÐºÐ° 2: " << Figure2Ver1 << ", " << Figure2Ver2 << ", " << Figure2Ver3 << endl;
 
 	if (!TriangleFigure1.IsTriangle() || !TriangleFigure2.IsTriangle())
 	{
-		cout << "Çàäàíû êîîðäèíàòû, êîòîðûå íå îáðàçóþò òðåóãîëüíèê. Ïîèñê ïåðåñå÷åíèé íåâîçìîæåí!" << endl;
+		cout << "Ð—Ð°Ð´Ð°Ð½Ñ‹ ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ñ‹, ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ðµ Ð½Ðµ Ð¾Ð±Ñ€Ð°Ð·ÑƒÑŽÑ‚ Ñ‚Ñ€ÐµÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸Ðº. ÐŸÐ¾Ð¸ÑÐº Ð¿ÐµÑ€ÐµÑÐµÑ‡ÐµÐ½Ð¸Ð¹ Ð½ÐµÐ²Ð¾Ð·Ð¼Ð¾Ð¶ÐµÐ½!" << endl;
 	}
-	//ïðîâåðêà íà ñîâïàäåíèå òðåóãîëüíèêîâ
+	//Ð¿Ñ€Ð¾Ð²ÐµÑ€ÐºÐ° Ð½Ð° ÑÐ¾Ð²Ð¿Ð°Ð´ÐµÐ½Ð¸Ðµ Ñ‚Ñ€ÐµÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸ÐºÐ¾Ð²
 	else if (TriangleFigure1.IsIdenticalTriangles(TriangleFigure1, TriangleFigure2))
 	{
-		cout << "Òðåóãîëüíèêè ñîâïàäàþò ïî êîîðäèíàòàì" << endl;
+		cout << "Ð¢Ñ€ÐµÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸ÐºÐ¸ ÑÐ¾Ð²Ð¿Ð°Ð´Ð°ÑŽÑ‚ Ð¿Ð¾ ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ð°Ð¼" << endl;
 	}
 	else
 	{
@@ -55,19 +55,19 @@ int main(int argc, char** argv)
 
 		if (PolygonIntersection.GetCoordinatesPolygon().size() == 0)
 		{
-			cout << "Òðåóãîëüíèêè íå ïåðåñåêàþòñÿ" << endl;
+			cout << "Ð¢Ñ€ÐµÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸ÐºÐ¸ Ð½Ðµ Ð¿ÐµÑ€ÐµÑÐµÐºÐ°ÑŽÑ‚ÑÑ" << endl;
 		}
 		else if (PolygonIntersection.GetCoordinatesPolygon().size() == 1 || PolygonIntersection.GetCoordinatesPolygon().size() == 2)
 		{
-			cout << "Òðåóãîëüíèêè ñîïðèêàñàþòñÿ â òî÷êå/òî÷êàõ: " << endl;
+			cout << "Ð¢Ñ€ÐµÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸ÐºÐ¸ ÑÐ¾Ð¿Ñ€Ð¸ÐºÐ°ÑÐ°ÑŽÑ‚ÑÑ Ð² Ñ‚Ð¾Ñ‡ÐºÐµ/Ñ‚Ð¾Ñ‡ÐºÐ°Ñ…: " << endl;
 		}
 		else if (IsInside)
 		{
-			cout << "Îäèí òðåóãîëüíèê âëîæåí â äðóãîé. Âíóòðè òðåóãîëüíèê, ñîäåðæàùèé òî÷êè: " << endl;
+			cout << "ÐžÐ´Ð¸Ð½ Ñ‚Ñ€ÐµÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸Ðº Ð²Ð»Ð¾Ð¶ÐµÐ½ Ð² Ð´Ñ€ÑƒÐ³Ð¾Ð¹. Ð’Ð½ÑƒÑ‚Ñ€Ð¸ Ñ‚Ñ€ÐµÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸Ðº, ÑÐ¾Ð´ÐµÑ€Ð¶Ð°Ñ‰Ð¸Ð¹ Ñ‚Ð¾Ñ‡ÐºÐ¸: " << endl;
 		}
 		else
 		{
-			cout << "Òðåóãîëüíèêè ïåðåñåêàþòñÿ â òî÷êàõ: " << endl;
+			cout << "Ð¢Ñ€ÐµÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸ÐºÐ¸ Ð¿ÐµÑ€ÐµÑÐµÐºÐ°ÑŽÑ‚ÑÑ Ð² Ñ‚Ð¾Ñ‡ÐºÐ°Ñ…: " << endl;
 		}
 		PolygonIntersection.PrintPolygonPoints();
 	}
@@ -76,7 +76,7 @@ int main(int argc, char** argv)
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
 	glutInitWindowSize(600, 600);
 	glutInitWindowPosition(900, 100);
-	glutCreateWindow("Îïðåäåëåíèå êîíòóðà ïåðåñå÷åíèÿ òðåóãîëüíèêîâ");
+	glutCreateWindow("ÐžÐ¿Ñ€ÐµÐ´ÐµÐ»ÐµÐ½Ð¸Ðµ ÐºÐ¾Ð½Ñ‚ÑƒÑ€Ð° Ð¿ÐµÑ€ÐµÑÐµÑ‡ÐµÐ½Ð¸Ñ Ñ‚Ñ€ÐµÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸ÐºÐ¾Ð²");
 	glutDisplayFunc(Display);
 	MyInit();
 	glutMainLoop();
@@ -117,17 +117,17 @@ void Display()
 	Draw2DAxis();
 
 	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-	glColor3f(0.0f, 0.5f, 0.0f);//çåëåíûé
+	glColor3f(0.0f, 0.5f, 0.0f);//Ð·ÐµÐ»ÐµÐ½Ñ‹Ð¹
 
 	CreateTriangle(TriangleFigure1);
 
-	glColor3f(0.0f, 0.5f, 1.0f);//ñèíèé
+	glColor3f(0.0f, 0.5f, 1.0f);//ÑÐ¸Ð½Ð¸Ð¹
 	CreateTriangle(TriangleFigure2);
 
-	//êîíòóð òðåóãîëüíèêîâ
+	//ÐºÐ¾Ð½Ñ‚ÑƒÑ€ Ñ‚Ñ€ÐµÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸ÐºÐ¾Ð²
 	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 	glLineWidth(2);
-	glColor3f(0.0f, 0.0f, 0.0f);//÷åðíûé
+	glColor3f(0.0f, 0.0f, 0.0f);//Ñ‡ÐµÑ€Ð½Ñ‹Ð¹
 
 	CreateTriangle(TriangleFigure1);
 
@@ -135,7 +135,7 @@ void Display()
 
 	glPolygonMode(GL_FRONT_AND_BACK, GL_POINT);
 	glPointSize(5);
-	glColor3f(1.0f, 0.0f, 0.0f);//êðàñíûé
+	glColor3f(1.0f, 0.0f, 0.0f);//ÐºÑ€Ð°ÑÐ½Ñ‹Ð¹
 	glBegin(GL_POINTS);
 	for (unsigned int i = 0; i < PolygonIntersection.GetCoordinatesPolygon().size(); i++)
 	{
@@ -148,11 +148,11 @@ void Display()
 
 void MyInit()
 {
-	glClearColor(1.0f, 1.0f, 1.0f, 1.0f);//ôîí áåëûé
-	glClearDepth(1.0f);//çíà÷åíèå áóôåðà ãëóáèíû ïî óìîë÷àíèþ
-	//glEnable(GL_DEPTH_TEST);//Âêë. òåñò ãëóáèíû
+	glClearColor(1.0f, 1.0f, 1.0f, 1.0f);//Ñ„Ð¾Ð½ Ð±ÐµÐ»Ñ‹Ð¹
+	glClearDepth(1.0f);//Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð±ÑƒÑ„ÐµÑ€Ð° Ð³Ð»ÑƒÐ±Ð¸Ð½Ñ‹ Ð¿Ð¾ ÑƒÐ¼Ð¾Ð»Ñ‡Ð°Ð½Ð¸ÑŽ
+	//glEnable(GL_DEPTH_TEST);//Ð’ÐºÐ». Ñ‚ÐµÑÑ‚ Ð³Ð»ÑƒÐ±Ð¸Ð½Ñ‹
 
-	glTranslatef(300.0f, 300.0f, 0.0f);//ñäâèã íà÷àëà ñèñòåìû êîîðäèíàò
+	glTranslatef(300.0f, 300.0f, 0.0f);//ÑÐ´Ð²Ð¸Ð³ Ð½Ð°Ñ‡Ð°Ð»Ð° ÑÐ¸ÑÑ‚ÐµÐ¼Ñ‹ ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚
 
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();

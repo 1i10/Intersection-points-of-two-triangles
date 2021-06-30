@@ -34,24 +34,24 @@ bool Triangle::IsIdenticalTriangles(Triangle Figure1, Triangle Figure2)
 		{
 			if (Figure1.CoordinateTriangle[i] == Figure2.CoordinateTriangle[j])
 			{
-				//äâå âåðøèíû ñîâïàäàþò
+				//Ð´Ð²Ðµ Ð²ÐµÑ€ÑˆÐ¸Ð½Ñ‹ ÑÐ¾Ð²Ð¿Ð°Ð´Ð°ÑŽÑ‚
 				break;
 			}
 		}
-		if (j == Figure2.CoordinateTriangle.size())//òî÷êà íå áûëà íàéäåíà ïðè ïðîáåãå
+		if (j == Figure2.CoordinateTriangle.size())//Ñ‚Ð¾Ñ‡ÐºÐ° Ð½Ðµ Ð±Ñ‹Ð»Ð° Ð½Ð°Ð¹Ð´ÐµÐ½Ð° Ð¿Ñ€Ð¸ Ð¿Ñ€Ð¾Ð±ÐµÐ³Ðµ
 		{
-			//òðåóãîëüíèêè íå ñîâïàäàþò
+			//Ñ‚Ñ€ÐµÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸ÐºÐ¸ Ð½Ðµ ÑÐ¾Ð²Ð¿Ð°Ð´Ð°ÑŽÑ‚
 			return false;
 		}
 	}
-	//òðåóãîëüíèêè ñîâïàäàþò
+	//Ñ‚Ñ€ÐµÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸ÐºÐ¸ ÑÐ¾Ð²Ð¿Ð°Ð´Ð°ÑŽÑ‚
 	return true;
 }
 
 bool Triangle::IsTriangle()
 {
-	//ñîñòàâèòü óðàâíåíèå ïðÿìîé ïî äâóì òî÷êàì
-	//åñëè òðåòüÿ òî÷êà ïðèíàäëåæèò ýòîé ëèíèè (óðàâíåíèå = 0), òî òî÷êè îáðàçóþò ïðÿìóþ èëè îíè âñå â îäíîé òî÷êå
+	//ÑÐ¾ÑÑ‚Ð°Ð²Ð¸Ñ‚ÑŒ ÑƒÑ€Ð°Ð²Ð½ÐµÐ½Ð¸Ðµ Ð¿Ñ€ÑÐ¼Ð¾Ð¹ Ð¿Ð¾ Ð´Ð²ÑƒÐ¼ Ñ‚Ð¾Ñ‡ÐºÐ°Ð¼
+	//ÐµÑÐ»Ð¸ Ñ‚Ñ€ÐµÑ‚ÑŒÑ Ñ‚Ð¾Ñ‡ÐºÐ° Ð¿Ñ€Ð¸Ð½Ð°Ð´Ð»ÐµÐ¶Ð¸Ñ‚ ÑÑ‚Ð¾Ð¹ Ð»Ð¸Ð½Ð¸Ð¸ (ÑƒÑ€Ð°Ð²Ð½ÐµÐ½Ð¸Ðµ = 0), Ñ‚Ð¾ Ñ‚Ð¾Ñ‡ÐºÐ¸ Ð¾Ð±Ñ€Ð°Ð·ÑƒÑŽÑ‚ Ð¿Ñ€ÑÐ¼ÑƒÑŽ Ð¸Ð»Ð¸ Ð¾Ð½Ð¸ Ð²ÑÐµ Ð² Ð¾Ð´Ð½Ð¾Ð¹ Ñ‚Ð¾Ñ‡ÐºÐµ
 	LineEquation SideTriangle(this->CoordinateTriangle[0], this->CoordinateTriangle[1]);
 
 	float Equation = SideTriangle.GetA() * this->CoordinateTriangle[2].GetX() + SideTriangle.GetB() * this->CoordinateTriangle[2].GetY() + SideTriangle.GetC();
